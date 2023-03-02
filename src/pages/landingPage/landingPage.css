@@ -1,0 +1,13 @@
+.sideBar {
+    height: 100vh;
+    display: block;
+   
+}
+
+.rightBar {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    height: 100vh;
+
+}

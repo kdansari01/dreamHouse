@@ -1,0 +1,63 @@
+.imgSec {
+    position: relative;
+}
+
+.likes {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    font-size: 34px;
+}
+
+.tagline {
+    position: absolute;
+    float: right;
+    left: 73%;
+    top: 13px;
+    font-size: 18px;
+    background: #ff4242b8;
+    padding: 4px;
+    font-weight: 600;
+    color: white;
+    /* color: transparent; */
+    border-radius: 9px;
+}
+
+.location {
+    position: absolute;
+    margin-top: -10%;
+    align-items: center;
+    display: flex;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.desBorder {
+    border-right: 1px solid black;
+}
+
+.price {
+    color: #ef1717;
+}
+
+.card-title {
+    color: red;
+}
+
+.likes:hover {
+    background: red;
+}
+
+.cardSize {
+    width: 44%;
+}
+
+.card-img-top {
+    transition: 0.4s ease-in;
+}
+
+.card-img-top:hover {
+    /* transform: scale(1.1); */
+    cursor: pointer;
+}

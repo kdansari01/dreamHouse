@@ -1,0 +1,57 @@
+.wrappr {
+    /* background-color: blueviolet; */
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80") no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+/* .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: red;
+    color: white;
+} */
+
+.Find {
+    width: 100%;
+    position: relative;
+    transform: translate(0%, 72%);
+    margin-bottom: 10px;
+}
+
+.mainCotainer {
+    width: 80vw;
+    padding: 20px 0px 0px 26px;
+}
+
+.backHomeSec {
+    position: relative;
+
+}
+
+.BackHome {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.featured {
+    margin-bottom: 20px;
+    margin-top: 32%;
+}
+
+.activeTabSec {
+    position: relative;
+}
+
+.tabs {
+    position: absolute;
+    transform: translate(16rem, 5rem);
+    /* background: white; */
+    border-radius: 11px;
+}
+.active-content {
+    display: block;
+  }
+  .content {
+    display: none;
+  }
