@@ -1,0 +1,17 @@
+.news {
+    /* height: 100vh; */
+    padding: 11px;
+}
+
+.admin {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 18px;
+    padding-top: 6px;
+    /* font-weight: bold; */
+    /* color: red; */
+}
+/* .cardScroll{
+    padding: 11px;
+} */

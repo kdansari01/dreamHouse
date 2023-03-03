@@ -5,6 +5,7 @@ import homeImgae from "../../assests/images/hero-banner.png";
 import Button from "../../components/button";
 import Service from "../service/Service";
 import { Link } from "react-router-dom";
+import News from "../news/News";
 const Home = () => {
   return (
       <div className="Home_Bg ">
@@ -25,6 +26,9 @@ const Home = () => {
         </div>
         <div>
           <Service />
+        </div>
+        <div className="mt-4">
+          <News/>
         </div>
       </div>
   );

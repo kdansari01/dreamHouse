@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-.logoSec{
+
+.logoSec {
     border-bottom: 1px solid black;
     justify-content: center;
     display: flex;
     align-items: center;
 }
-.logoText{
+
+.logoText {
     font-size: 30px;
 }
+
+/* .nav-links {
+    transition: .4s ease-in-out;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid blue;
+
+} */
+
 /* .sideBar{
     height: 100vh;
     display: block;

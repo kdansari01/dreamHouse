@@ -5,7 +5,7 @@ import featuresImg3 from "../../assests/images/property-3.jpg";
 import featuresImg4 from "../../assests/images/property-4.png";
 import featuresImg5 from "../../assests/images/blog-1.png";
 import featuresImg6 from "../../assests/images/blog-2.jpg";
-
+import Slide from 'react-reveal/Slide';
 import "./featured.css";
 import FeaturedCard from "./FeaturedCard";
 const ForBuyFeatureCard = () => {

@@ -5,12 +5,17 @@ import { Link } from "react-router-dom";
 // import Home from "../../pages/home/Home";
 export const Navbar = () => {
   // const [sidebarOpen, setSidebarOpen] = useState(false);
+  // const [isActive, setIsActive] = useState(1);
+  
+
+  // const toggleBtn=(index)=>{
+  //   setIsActive(index)
+  // }
 
   return (
     <>
-
       <div className="sideBar ">
-      {/* <div> */}
+        {/* <div> */}
         {/* <nav className={`navbar ${sidebarOpen ? "open" : ""}`}> */}
         <nav className="">
           {/* <button
@@ -30,7 +35,10 @@ export const Navbar = () => {
             <main>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item navTitle">
-                  <Link className="nav-link active" to="/">
+                  <Link
+                    className="nav-link active" 
+                    to="/"
+                  >
                     Home
                   </Link>
                 </li>
@@ -55,7 +63,7 @@ export const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" href="/">
+                  <a className="nav-link active" href="#news">
                     News
                   </a>
                 </li>
@@ -64,7 +72,6 @@ export const Navbar = () => {
           </div>
         </nav>
       </div>
-
     </>
   );
 };
