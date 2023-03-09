@@ -1,8 +1,6 @@
 import "./App.css";
-import LandingPage from "./pages/landingPage/LandingPage";
 import { BrowserRouter, Routes,Route } from "react-router-dom";
 import Home from "./pages/home/Home";
-import { Navbar } from "./components/navbar/Navbar";
 import FindHome from "./pages/findHome/FindHome";
 import Service from "./pages/service/Service";
 function App() {

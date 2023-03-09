@@ -15,12 +15,14 @@ const Service = () => {
       <div className=" col-lg-3 col-md-3 col-12">
         <Navbar />
       </div>
-      <Fade bottom>
-        <div className="service col-lg-9" id="service">
+
+      <div className="service col-lg-9" id="service">
+        <Fade right>
           <div className="d-flex text-center justify-content-center mt-4 mb-4">
             <h1 className="text-center">Our Main Focus</h1>
           </div>
-
+        </Fade>
+        <Fade bottom>
           <div className="">
             <Swiper
               spaceBetween={60}
@@ -40,8 +42,8 @@ const Service = () => {
               {/* <SwiperSlide>Slide 4</SwiperSlide> */}
             </Swiper>
           </div>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
     </div>
   );
 };
