@@ -1,9 +1,9 @@
 import React from "react";
 import "./button.css";
-const Button = ({title}) => {
+const Button = ({title,onClick}) => {
   return (
     <div>
-      <button className="button-82-pushable" role="button">
+      <button className="button-82-pushable" role="button" onClick={onClick}>
         <span className="button-82-shadow"></span>
         <span className="button-82-edge"></span>
         <span className="button-82-front text">{title}</span>

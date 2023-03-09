@@ -10,6 +10,14 @@
 .logoText {
     font-size: 30px;
 }
+/* .atctiveHome{
+    background: rgba(126, 125, 125, 0.842);
+    color: black;
+} */
+.atctiveHome:active{
+     background: rgba(126, 125, 125, 0.842);
+    color: black;
+}
 
 /* .nav-links {
     transition: .4s ease-in-out;

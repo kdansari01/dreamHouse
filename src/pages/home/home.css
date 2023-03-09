@@ -2,7 +2,11 @@
 :root{
     --home_bg:rgb(242, 246, 247);
 }
-
+.mainHomeCont{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
    .Wrapper_Home{
     background-color:var(--home_bg);
     height: 100vh;

@@ -6,6 +6,7 @@
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
+
 /* .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: red;
     color: white;
@@ -14,7 +15,7 @@
 .Find {
     width: 100%;
     position: relative;
-    transform: translate(0%, 72%);
+    transform: translate(0%, 26%);
     margin-bottom: 10px;
 }
 
@@ -36,7 +37,7 @@
 
 .featured {
     margin-bottom: 20px;
-    margin-top: 32%;
+    /* margin-top: 32%; */
 }
 
 .activeTabSec {
@@ -44,14 +45,32 @@
 }
 
 .tabs {
-    position: absolute;
+    /* position: absolute;
     transform: translate(16rem, 5rem);
-    /* background: white; */
-    border-radius: 11px;
+    background: white;
+    border-radius: 11px; */
+    width: 16.9rem;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 11%;
+    margin-left: 34%;
 }
+
 .active-content {
     display: block;
-  }
-  .content {
+}
+
+.content {
     display: none;
-  }
+}
+
+.wrap {
+    position: relative;
+    top: 6rem;
+}
+
+.SellSec {
+    margin-top: 16%;
+}

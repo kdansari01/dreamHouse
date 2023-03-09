@@ -1,79 +1,70 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import InputAdornment from "@mui/material/InputAdornment";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import TextField from "@mui/material/TextField";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-// import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
-// import { Link } from "react-router-dom";
-import Button from "../../components/button";
+import React, { useState } from "react";
+import { Fade } from "react-reveal";
+import FiltersCard from "../../components/FiltersCard";
+import { RentData } from "../feautres/Data";
+import FeaturedCard from "../feautres/FeaturedCard";
 import "./findHome.css";
 const ForRent = () => {
+  const [filtereList, setFilterList] = useState(RentData);
+  const [filter, setFilter] = useState({});
+  const handleValue = (name, value) => {
+    setFilter((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onClickSearch = () => {
+    const listOfFiltered = Object.values(filter);
+    if (listOfFiltered.length) {
+      //logic filter
+      const data = RentData.filter((item) => {
+        return Object.keys(filter).some((key) => {
+          return item[key].toLowerCase().includes(filter[key].toLowerCase());
+        });
+      });
+      setFilterList(data);
+    }
+  };
+  // console.log("hit me",onClickSearch())
+  console.log("filtereList", filtereList);
   return (
-    <div>
-      <div className="Find">
-        <h1>
-          Find Your <br /> Dream Home
-        </h1>
-        <div className="mainContainer bg-light mb-4 container-fluid">
-          <div className="justify-content- row d-flex col-12 p-4 ">
-            <Box sx={{ minWidth: 120 }} className="col-lg-3 col-md-3 col-4">
-              <label>Location</label>
-              <TextField
-                id="outlined-basic"
-                variant="outlined"
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <LocationOnOutlinedIcon />
-                    </InputAdornment>
-                  ),
-                }}
+    <>
+      <Fade bottom>
+        <div className="Find">
+          <FiltersCard
+            onChange={handleValue}
+            onClick={onClickSearch}
+            range1="none"
+            range2="10k-20k"
+            range3="20k-30k"
+            range4="30k-40k"
+            range5="40k-50k"
+          />
+        </div>
+      </Fade>
+
+      <div className="wrap">
+        <div className="heading d-flex justify-content-center mb-4">
+          <h1 className="text-light">Featured Listings</h1>
+        </div>
+        <div className="row d-flex justify-content-center">
+          {filtereList &&
+            filtereList.map((data, ind) => (
+              <FeaturedCard
+                key={data.id}
+                title={data.title}
+                img={data.img}
+                price={data.price}
+                details={data.details}
+                bedrooms={data.bedrooms}
+                bathrooms={data.bathrooms}
+                sqrFt={data.sqrFt}
+                location={data.location}
+                types={data.types}
+                purpose={data.purpose}
               />
-            </Box>
-            <Box sx={{ minWidth: 120 }} className="col-lg-3 col-md-3 col-4">
-              <label>Types Of Properties</label>
-              <FormControl fullWidth>
-                <Select label="" id="demo-simple-select">
-                  <MenuItem value={1}>Apartment</MenuItem>
-                  <MenuItem value={2}>Villa</MenuItem>
-                  <MenuItem value={3}>Farm House</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-            <Box sx={{ minWidth: 120 }} className="col-lg-3 col-md-3 col-4">
-              <label>Rooms</label>
-              <FormControl fullWidth>
-                <Select label="" id="demo-simple-select">
-                  <MenuItem value={1}>2 BHK</MenuItem>
-                  <MenuItem value={2}>3 BHK</MenuItem>
-                  <MenuItem value={3}>4 BHK</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-            <Box sx={{ minWidth: 120 }} className="col-lg-3 col-md-3 col-4">
-              <label>Price</label>
-              <FormControl fullWidth>
-                <Select label="" id="demo-simple-select">
-                  <MenuItem value={1}>10k-20k</MenuItem>
-                  <MenuItem value={2}>20k-30k</MenuItem>
-                  <MenuItem value={3}>30k-40k</MenuItem>
-                  <MenuItem value={3}>40k-50k</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-            <Box sx={{ minWidth: 120 }} className="col-lg-3 col-md-3 col-4">
-              <div className="d-flex mt-4">
-                <h6 className="text-muted m-3">Clear Filter</h6>
-                <Button title="Search" />
-              </div>
-            </Box>
-          </div>
+            ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
